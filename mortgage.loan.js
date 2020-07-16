@@ -15,8 +15,12 @@ function convertYearsToMonths(years) {
 	return years * 12;
 }
 
-const buttonCalculate = document.getElementsById('btn-calculate');
+const buttonCalculate = document.getElementById('btn-calculate');
 buttonCalculate.onclick = function() {
-	
+	const costOfHouse = document.getElementById('cost').value;
+	const downPayment = document.getElementById('down').value;
+	const interest = document.getElementById('interest').value;
+	const period = document.getElementById('period').value;
+	console.log(costOfHouse, downPayment, interest, period)
 }
 
