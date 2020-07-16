@@ -15,6 +15,14 @@ function convertYearsToMonths(years) {
 	return years * 12;
 }
 
+
+function showPayment(payment) {
+	var monthlyPay = document.getElementById('monthlypayment');
+	monthlyPay.innerText = "KES. "+payment;
+	console.log(monthlyPay)
+
+}
+
 const buttonCalculate = document.getElementById('btn-calculate');
 buttonCalculate.onclick = function() {
 	var costOfHouse = document.getElementById('cost').value;
@@ -22,7 +30,10 @@ buttonCalculate.onclick = function() {
 	var interest = document.getElementById('interest').value;
 	var period = document.getElementById('period').value;
 	var amountBorrowed = costOfHouse - downPayment;
-	console.log(calculateMortgage(amountBorrowed, interest, period));
+
+	var pay = calculateMortgage(amountBorrowed, interest, period)
+	showPayment(pay);
+	console.log(pay);
 	console.log(costOfHouse, downPayment, interest, period, amountBorrowed)
 }
 
