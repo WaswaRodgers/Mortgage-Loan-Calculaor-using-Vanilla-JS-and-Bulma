@@ -5,7 +5,7 @@ function calculateMortgage(p, r, n) {
 	return parseFloat(pay).toFixed(2);
 }
 
-console.log(calculateMortgage(4000, 18, 2));
+
 
 function convertPercentToDecimal(percent) {
 	return (percent / 100) / 12;
@@ -17,10 +17,12 @@ function convertYearsToMonths(years) {
 
 const buttonCalculate = document.getElementById('btn-calculate');
 buttonCalculate.onclick = function() {
-	const costOfHouse = document.getElementById('cost').value;
-	const downPayment = document.getElementById('down').value;
-	const interest = document.getElementById('interest').value;
-	const period = document.getElementById('period').value;
-	console.log(costOfHouse, downPayment, interest, period)
+	var costOfHouse = document.getElementById('cost').value;
+	var downPayment = document.getElementById('down').value;
+	var interest = document.getElementById('interest').value;
+	var period = document.getElementById('period').value;
+	var amountBorrowed = costOfHouse - downPayment;
+	console.log(calculateMortgage(amountBorrowed, interest, period));
+	console.log(costOfHouse, downPayment, interest, period, amountBorrowed)
 }
 
