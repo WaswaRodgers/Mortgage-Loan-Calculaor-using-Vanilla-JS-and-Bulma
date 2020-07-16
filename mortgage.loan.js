@@ -19,7 +19,6 @@ function convertYearsToMonths(years) {
 function showPayment(payment) {
 	var monthlyPay = document.getElementById('monthlypayment');
 	monthlyPay.innerText = "KES. "+payment;
-	console.log(monthlyPay)
 
 }
 
@@ -33,7 +32,5 @@ buttonCalculate.onclick = function() {
 
 	var pay = calculateMortgage(amountBorrowed, interest, period)
 	showPayment(pay);
-	console.log(pay);
-	console.log(costOfHouse, downPayment, interest, period, amountBorrowed)
 }
 
