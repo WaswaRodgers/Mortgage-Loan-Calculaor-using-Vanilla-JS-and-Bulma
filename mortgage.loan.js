@@ -15,3 +15,8 @@ function convertYearsToMonths(years) {
 	return years * 12;
 }
 
+const buttonCalculate = document.getElementsById('btn-calculate');
+buttonCalculate.onclick = function() {
+	
+}
+
